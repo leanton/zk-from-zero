@@ -29,3 +29,13 @@ nargo verify
 ## Notes
 
 Running log of what shipped, what broke, and what's next lives in [`PROGRESS.md`](./PROGRESS.md).
+
+## References
+
+- [Noir docs](https://noir-lang.org/docs) — language reference and prove/verify walkthroughs
+- [Nargo install](https://noir-lang.org/docs/getting_started/quick_start) — `noirup` and toolchain setup
+- [Awesome Noir](https://github.com/noir-lang/awesome-noir) — curated circuits, libraries, and tutorials
+- [`noir-examples`](https://github.com/noir-lang/noir-examples) — reference circuits, including Merkle and signature patterns
+- [Noir stdlib](https://noir-lang.org/docs/noir/standard_library) — Poseidon, ECDSA, EdDSA, Merkle helpers
+- [`nargo` CLI reference](https://noir-lang.org/docs/reference/nargo_commands) — commands the Rust wrapper will shell out to
+- Top-level [`README.md`](../README.md) and [`ULTRALEARN_PLAN.md`](../ULTRALEARN_PLAN.md) — the broader 12-week plan this phase sits in
