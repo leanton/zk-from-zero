@@ -17,13 +17,15 @@ Ship 5 working Noir circuits + a Rust CLI wrapper around `nargo`, all visible in
 
 ## How to run
 
-Populated as each subproject lands. Typical loop:
+Populated as each subproject lands. Typical loop (Nargo 1.0 beta; `nargo prove`/`verify` are gone — proving moved to Barretenberg's `bb` CLI):
 
 ```
 cd <circuit>
-nargo check
-nargo prove
-nargo verify
+nargo check                          # generate Prover.toml / Verifier.toml templates
+nargo execute                        # compile + run; writes target/<name>.json (ACIR) and target/<name>.gz (witness)
+bb prove    -b target/<name>.json -w target/<name>.gz -o target/proof
+bb write_vk -b target/<name>.json                       -o target/vk
+bb verify   -k target/vk          -p target/proof
 ```
 
 ## Notes

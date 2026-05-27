@@ -1,0 +1,10 @@
+# Noir / Nargo
+target/
+
+# Rust
+**/target/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
