@@ -4,13 +4,16 @@ Running log of what shipped, what broke, and what's next. Append-only; oldest at
 
 ## Week 1
 
-**Shipped:**
--
+### Shipped
+- Simple hello world was create
+- Poseidon hashing done, preimage verification
 
-**Stuck on:**
--
+### Learnt
+- Documentation is quite scarce -> easier to use Claude to figure out the documentation bits -> can probably contribute to the repo to improve the docs (although the reason is understandable since it's still not a prod version)
+- Figured out how hashing works and some basic primitive types (Field)
+- 
 
-**Next:**
+### Next
 -
 
 ## Week 2

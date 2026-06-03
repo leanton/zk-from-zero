@@ -8,7 +8,7 @@ Ship 5 working Noir circuits + a Rust CLI wrapper around `nargo`, all visible in
 
 ## Deliverables
 
-- [ ] `hello/` — prove `x != y`
+- [x] `hello/` — prove `x != y`
 - [ ] `preimage/` — prove knowledge of a Poseidon preimage of a public hash
 - [ ] `age-over-18/` — private DOB satisfies a public constraint
 - [ ] `merkle/` — prove an element is in a tree without revealing which
@@ -23,9 +23,8 @@ Populated as each subproject lands. Typical loop (Nargo 1.0 beta; `nargo prove`/
 cd <circuit>
 nargo check                          # generate Prover.toml / Verifier.toml templates
 nargo execute                        # compile + run; writes target/<name>.json (ACIR) and target/<name>.gz (witness)
-bb prove    -b target/<name>.json -w target/<name>.gz -o target/proof
-bb write_vk -b target/<name>.json                       -o target/vk
-bb verify   -k target/vk          -p target/proof
+bb prove -b ./target/hello.json -w ./target/hello.gz --write_vk -o target
+bb verify -p ./target/proof -k ./target/vk
 ```
 
 ## Notes
