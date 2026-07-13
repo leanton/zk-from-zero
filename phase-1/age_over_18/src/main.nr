@@ -1,8 +1,8 @@
 fn main(dob: u32, current_date: pub u32) {
     validate_date_format(dob);
     validate_date_format(current_date);
-    let threashold_date = current_date - 180000;
-    assert(dob <= threashold_date);
+    let threshold_date = current_date - 180000;
+    assert(dob <= threshold_date);
 }
 
 fn validate_date_format(date: u32) {

@@ -1,0 +1,6 @@
+[package]
+name = "signature"
+type = "bin"
+authors = [""]
+
+[dependencies]
