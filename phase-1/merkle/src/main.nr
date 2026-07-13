@@ -6,11 +6,12 @@ use poseidon::poseidon::bn254::{hash_1, hash_2};
 fn main(leaf: Value, path: [Hash; 3], indices: [bool; 3], root: pub Hash) {
     let mut current: Field = hash_1([leaf]); // step 0: hash raw value
     for i in 0..3 {
-        if indices[i] == false {
-            current = hash_2([current, path[i]]);
+        let (left, right) = if indices[i] {
+            (path[i], current)
         } else {
-            current = hash_2([path[i], current]);
-        }
+            (current, path[i])
+        };
+        current = hash_2([left, right]);
     }
     assert(current == root);
 }

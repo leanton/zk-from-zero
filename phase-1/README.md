@@ -12,7 +12,7 @@ Ship 5 working Noir circuits + a Rust CLI wrapper around `nargo`, all visible in
 - [x] `preimage/` — prove knowledge of a Poseidon preimage of a public hash
 - [x] `age_over_18/` — private DOB satisfies a public constraint
 - [x] `merkle/` — prove an element is in a tree without revealing which
-- [ ] `signature/` — ECDSA or EdDSA verification inside a circuit
+- [x] `signature/` — ECDSA or EdDSA verification inside a circuit
 - [ ] `cli/` — Rust CLI: takes inputs, writes `Prover.toml`, runs the proof, parses output
 
 ## How to run
